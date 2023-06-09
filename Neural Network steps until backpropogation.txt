@@ -1,0 +1,20 @@
+S6 Assignment Part 1:
+There are 3 layers in the given network, 1 input layer,1 hidden layer and 1 output layer
+Step1:
+- I1 and I1 are inputs  and random values for t1 and t2 are assigned and initial values for weights w1,w2,w3,w4 are choosen.
+- 1st neuron of the hidden layer(h1) is created by the formula w1*i1+w2*i2, similarly, 2nd neuron in the hidden layer is computed by replacing the corresponding weights
+- Sigmoid activation happens on both the neurons h1 and h2
+Step2:
+- Random weights for the hidden layer are initialized for w5,w6,w7,w8
+- Output neurons are calculated by multiplying its corresponding weights with its neuron after activation example, w5*a_h1+w6*a_h2
+- Sigmoid Activation happens on the output neurons using a_o1=1/(1+exp(-o1), similarly on a_o2 as well,
+- Loss is calculated on the output neurons E1 = ½ * (t1 - a_o1)² and E2
+Step3:
+- Backpropogation happens by passing the computed weights as input. As a result of differentiating Error total with respect to w1,w2,w3,w4,w5,w6,w7,w8.
+Using the formula DE_Total/DW1=((a_o1-t1)*a_o1*(1-a_o1)*w5+(a_o2-t2)*a_o2*(1-a_o2)*w7))*(a_h1*(1-a_h1)*i1 as example for w1, similarly calculate the weights for others
+
+Step4:
+- Using the above weights recompute the error iteratively to achieve reduction in the error
+
+
+ 
